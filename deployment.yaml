@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demoapp-deployment
+  labels:
+    app: demoapp-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: demoapp-service
+  template:
+    metadata:
+      labels:
+        app: demoapp-service
+    spec:
+      containers:
+      - name: demoapp-service
+        image: 컨테이너 이미지 경로 작성
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8100
+

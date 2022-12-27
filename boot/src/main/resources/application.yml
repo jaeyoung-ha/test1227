@@ -1,0 +1,10 @@
+server:
+  port: 8100
+
+spring:
+  application:
+    name: demobooth
+
+  profiles:
+    active: prod
+#    active: local
